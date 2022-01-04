@@ -15,7 +15,7 @@ let Random;
 function New_Game() {
     let again = Math.floor(Math.random() * 40 ) + 1;
     Random = again;
-    Start.style.display = 'grid';
+    Start.style.display = 'inline';
     section.innerHTML = '&#10068';
 }
 // Create Objects
