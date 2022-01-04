@@ -21,8 +21,8 @@ function New_Game() {
     Start.style.display = 'inline';
     section.innerHTML = '&#10068';
     h2.innerHTML = '';
+    Mistake.innerHTML = 0;
     j = 0;
-    k = 0;
 }
 // Create Objects
 const Start_Game = {
