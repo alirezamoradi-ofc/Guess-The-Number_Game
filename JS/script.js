@@ -9,6 +9,7 @@ let Score = document.querySelector('#score-number');
 
 let test = Math.floor(Math.random() * 40 ) + 1;
 let i = 0;
+let j = 0;
 let Random;
 
 // Functions
@@ -23,31 +24,33 @@ const Start_Game = {
     Start : function(){
         Random = test;
         Start.style.display = 'none';
+        k = 1;
     },
     Check : function(){
-        let x = document.forms['form']['x'].value;
-        if ( x == 0 ) {
-            h2.innerHTML = 'هنوز بازی رو شروع نکردی';
-            h2.style.color = '#fff';
-        }
-        else if ( x > 40 ){
-            h2.innerHTML = '&#128545' + 'از حد مجاز بیشتره';
-            h2.style.color = '#f00';
-        }
-        else if ( x == Random) {
-            alert('برنده شدی');
-            h2.innerHTML = '';
-            i += 1;
-            Score.innerHTML = i;
-            section.innerHTML = Random;
-        }
-        else if ( x > Random){
-            h2.innerHTML = 'خیلی زیاده';
-            h2.style.color = '#fff';
+        if ( j == 1 ) {
+            let x = document.forms['form']['x'].value;
+            if ( x > 40 ){
+                h2.innerHTML = '&#128545' + 'از حد مجاز بیشتره';
+                h2.style.color = '#f00';
+            }
+            else if ( x == Random) {
+                alert('برنده شدی');
+                h2.innerHTML = '';
+                i += 1;
+                Score.innerHTML = i;
+                section.innerHTML = Random;
+            }
+            else if ( x > Random){
+                h2.innerHTML = 'خیلی زیاده';
+                h2.style.color = '#fff';
+            }
+            else if ( x < Random ) {
+                h2.innerHTML = 'خیلی کمه';
+                h2.style.color = '#fff';
+            }   
         }
         else{
-            h2.innerHTML = 'خیلی کمه';
-            h2.style.color = '#fff';
+            alert ('هنوز بازی رو شروع نکردی');
         }
     },
     Reset : function(){
