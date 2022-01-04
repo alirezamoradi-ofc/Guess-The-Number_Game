@@ -16,7 +16,8 @@ let Random;
 
 // Functions
 function New_Game() {
-    Random = test;
+    let again = Math.floor(Math.random() * 40 ) + 1;
+    Random = again;
     Start.style.display = 'inline';
     section.innerHTML = '&#10068';
     h2.innerHTML = '';
@@ -27,7 +28,6 @@ function New_Game() {
 const Start_Game = {
     Start : function(){
         Random = test;
-        Start.style.display = 'none';
         j = 1;
     },
     Check : function(){
@@ -65,7 +65,8 @@ const Start_Game = {
         Score.innerHTML = 0;
         Start.style.display = 'inline';
         Mistake.innerHTML = 0;
-        Random = test;
+        let reset = Math.floor(Math.random() * 40 ) + 1;
+        Random = reset;
     }
 };
 
