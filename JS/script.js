@@ -20,8 +20,9 @@ function New_Game() {
     Random = again;
     Start.style.display = 'inline';
     section.innerHTML = '&#10068';
-    j = 0;
     h2.innerHTML = '';
+    j = 0;
+    k = 0;
 }
 // Create Objects
 const Start_Game = {
