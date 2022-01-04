@@ -24,9 +24,12 @@ const Start_Game = {
     Start : function(){
         Random = test;
         Start.style.display = 'none';
-        k = 1;
+        j = 1;
     },
     Check : function(){
+        if ( j == 0 ) {
+            alert ('هنوز بازی رو شروع نکردی');
+        }
         if ( j == 1 ) {
             let x = document.forms['form']['x'].value;
             if ( x > 40 ){
@@ -48,9 +51,6 @@ const Start_Game = {
                 h2.innerHTML = 'خیلی کمه';
                 h2.style.color = '#fff';
             }   
-        }
-        else{
-            alert ('هنوز بازی رو شروع نکردی');
         }
     },
     Reset : function(){
