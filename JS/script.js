@@ -7,8 +7,9 @@ const h2 = document.querySelector('main h2');
 const section = document.querySelector('section');
 let Score = document.querySelector('#score-number');
 
-let Random = Math.floor(Math.random() * 40 ) + 1;
+let test = Math.floor(Math.random() * 40 ) + 1;
 let i = 0;
+let Random = 0;
 
 // Functions
 function New_Game() {
@@ -20,11 +21,16 @@ function New_Game() {
 // Create Objects
 const Start_Game = {
     Start : function(){
+        test = Random;
         Start.style.display = 'none';
     },
     Check : function(){
         let x = document.forms['form']['x'].value;
-        if ( x > 40 ){
+        if ( x == 0) {
+            h2.innerHTML = 'هنوز بازی رو شروع نکردی';
+            h2.style.color = '#fff';
+        }
+        else if ( x > 40 ){
             h2.innerHTML = '&#128545' + 'از حد مجاز بیشتره';
             h2.style.color = '#f00';
         }
