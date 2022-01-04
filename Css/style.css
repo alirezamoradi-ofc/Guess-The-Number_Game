@@ -85,14 +85,18 @@ main button{
     font-size: xx-large;
     cursor: pointer;
 }
-#score, #high-score{
+#score, #mistake{
     grid-column: 11/12;
     grid-row: 4;
     font-size: xx-large;
     text-align: right;
     margin: 1em 1em 0 0;
 }
-#score-number{
+#mistake{
+    grid-column: 10/12;
+    grid-row: 5;
+}
+#score-number, #mistake-number{
     grid-column: 9/11;
     grid-row: 4;
     font-size: xx-large;
@@ -106,12 +110,19 @@ main button{
     font-size: xx-large;
     margin-top: 1em;
 }
-#high-score{
+#mistake-icon{
     grid-row: 5;
 }
-#high-score-icon{
+#mistake-icon{
     grid-column: 12/13;
     grid-row: 5;
     font-size: xx-large;
     margin-top: 1em;
+}
+#mistake-number{
+    grid-column: 9/11;
+    grid-row: 5;
+    color: #f00;
+    text-align: center;
+    margin: 1em 0 0 3em;
 }

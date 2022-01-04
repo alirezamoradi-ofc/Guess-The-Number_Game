@@ -6,10 +6,12 @@ const Check = document.querySelector('main button');
 const h2 = document.querySelector('main h2');
 const section = document.querySelector('section');
 let Score = document.querySelector('#score-number');
+let Mistake = document.querySelector('#mistake-number');
 
 let test = Math.floor(Math.random() * 40 ) + 1;
 let i = 0;
 let j = 0;
+let k = 0;
 let Random;
 
 // Functions
@@ -18,6 +20,8 @@ function New_Game() {
     Random = again;
     Start.style.display = 'inline';
     section.innerHTML = '&#10068';
+    j = 0;
+    h2.innerHTML = '';
 }
 // Create Objects
 const Start_Game = {
@@ -46,17 +50,21 @@ const Start_Game = {
             else if ( x > Random){
                 h2.innerHTML = 'خیلی زیاده';
                 h2.style.color = '#fff';
+                k += 1;
+                Mistake.innerHTML = k;
             }
             else if ( x < Random ) {
                 h2.innerHTML = 'خیلی کمه';
                 h2.style.color = '#fff';
+                k += 1;
+                Mistake.innerHTML = k;
             }   
         }
     },
     Reset : function(){
         Score.innerHTML = 0;
         Start.style.display = 'inline';
-
+        Mistake.innerHTML = 0;
     }
 };
 
