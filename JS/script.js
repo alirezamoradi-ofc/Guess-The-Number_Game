@@ -55,6 +55,8 @@ const Start_Game = {
     },
     Reset : function(){
         Score.innerHTML = 0;
+        Start.style.display = 'inline';
+
     }
 };
 
