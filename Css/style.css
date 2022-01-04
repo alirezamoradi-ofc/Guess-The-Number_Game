@@ -30,7 +30,7 @@ header h2{
     grid-row: 2;
     text-align: center;
 }
-#again, #start{
+#again, #start, #reset{
     grid-column: 1/2;
     grid-row: 2;
     margin-left: 0.5em;
@@ -39,6 +39,9 @@ header h2{
 }
 #start{
     grid-column: 2/3;
+}
+#reset{
+    grid-column: 3/4;
 }
 section{
     grid-column: 6/8;
@@ -73,6 +76,7 @@ input{
     grid-column: 1/13;
     grid-row: 1;
     font-size: xx-large;
+    text-align: center;
 }
 main button{
     grid-column: 2/4;

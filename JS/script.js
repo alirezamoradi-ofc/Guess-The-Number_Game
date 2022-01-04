@@ -1,6 +1,7 @@
 // Select Elements
 const Start = document.querySelector('#start');
 const Again = document.querySelector('#again');
+const Reset = document.querySelector('#reset');
 const Check = document.querySelector('main button');
 const h2 = document.querySelector('main h2');
 const section = document.querySelector('section');
@@ -42,6 +43,9 @@ const Start_Game = {
             h2.innerHTML = 'خیلی کمه';
             h2.style.color = '#fff';
         }
+    },
+    Reset : function(){
+        Score.innerHTML = 0;
     }
 };
 
@@ -49,3 +53,4 @@ const Start_Game = {
 Start.addEventListener('click', Start_Game.Start);
 Again.addEventListener('click', New_Game);
 Check.addEventListener('click', Start_Game.Check);
+Reset.addEventListener('click', Start_Game.Reset);
