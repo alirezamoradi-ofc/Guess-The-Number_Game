@@ -9,7 +9,7 @@ let Score = document.querySelector('#score-number');
 
 let test = Math.floor(Math.random() * 40 ) + 1;
 let i = 0;
-let Random = 0;
+let Random;
 
 // Functions
 function New_Game() {
@@ -21,12 +21,12 @@ function New_Game() {
 // Create Objects
 const Start_Game = {
     Start : function(){
-        test = Random;
+        Random = test;
         Start.style.display = 'none';
     },
     Check : function(){
         let x = document.forms['form']['x'].value;
-        if ( x == 0) {
+        if ( x == 0 ) {
             h2.innerHTML = 'هنوز بازی رو شروع نکردی';
             h2.style.color = '#fff';
         }
